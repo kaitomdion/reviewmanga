@@ -1,0 +1,19 @@
+<div class= header>
+  <%= link_to "漫画レビュー.com", root_path, class: "header__title2" %>
+</div>
+
+
+<% @products.each do |product| %>
+  <li class= 'books'>
+    <div class= 'book'>
+     <a href="/products/<%= product.id %>/reviews/new"><div class='book__image' style="background-image:url(<%= product.image_url %>)"></div></a>
+      <div class= 'book__title' title="<%= product.title %>">
+         <%= product.title %>
+      </div>
+      <div class= 'book__author' title="<%= product.author %>">
+         <%= product.author %>
+      </div>
+    </div>
+  </li>
+<% end %>
+<%= paginate(@products) %>

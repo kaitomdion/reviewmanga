@@ -1,0 +1,33 @@
+<div class= header>
+  <%= link_to "漫画レビュー.com", root_path, class: "header__title2" %>
+</div>
+
+
+
+<div class="new-product">
+  新規投稿
+  <span class="balloon">ここで新規投稿ができます!!</span>
+</div>
+<div class= book-create>
+<%= form_tag('/products', method: :post) do %>
+  
+    <div class= book-create__title>
+    タイトル<br>
+  <input placeholder="漫画のタイトルを入力してください" type="text" name="title" class="book-create__title__field">
+    </div>
+    <div class= book-create__image>
+    画像情報<br>
+  <input placeholder="漫画の画像情報を入力してください" type="text" name="image_url" class="book-create__image__field">
+    </div>
+    <div class= book-create__author>
+    作者名<br>
+  <input placeholder="漫画の作者名を入力してください" type="text" name="author" class="book-create__author__field">
+    </div>
+    <div class= book-create__genre>
+    ジャンル(少年漫画→１、青年漫画→２、少女漫画→３)<br>
+  <input placeholder="ジャンルを数字で入力してください" type="text" name="genre_id" class="book-create__genre__field">
+    </div>
+  <input type="submit" value="投稿" class="book-create__submit">
+<% end %>
+</div>
+</div>

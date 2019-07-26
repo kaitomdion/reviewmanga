@@ -1,0 +1,106 @@
+// Place all the styles related to the likes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+#like-button{
+  height: 30px;
+  width: 150px;
+  padding       : 5px 17px;   
+  background    : #6666ff;     
+  color         : #ffffff;     
+  opacity       : 0.5;         
+  border-radius : 46%;        
+  font-size     : 10.5pt;       
+  font-weight   : bold;        
+  line-height   : 1em;       
+  letter-spacing: 2px;        
+  text-align    : center;      
+  cursor        : pointer;  
+  margin-left: 30px;   
+}
+#like-button:hover {
+  opacity       : 0.9;
+}
+
+
+
+.create{
+    background-color: white;
+    height: 500px;
+    width: 400px;
+    border: solid 5px gold;
+    margin-left: 500px;
+    margin-top: 70px;
+    text-align: center;
+    border-radius: 3em;
+  .create__message{
+    font-size: 30px;
+    border-bottom: solid 5px black;
+  }
+  .create__mypage{
+    border-bottom: solid 5px black;
+    padding-bottom: 15px;
+    .create__mypage__text{
+      margin-top: 15px;
+      padding-bottom: 5px;
+      font-size: 25px;
+    }
+    .create__mypage__btn{
+      font-size: 20px;
+      color: black;
+      border: solid 2px #67c5ff;
+      border-radius: 3px;
+      transition: .4s;
+      background: #f2fcff;
+      padding: 5px;
+      text-decoration: none;
+      
+    }
+
+  }
+  .create__janl{
+    border-bottom: solid 5px black;
+    padding-bottom: 15px;
+    .create__janl__text{
+      margin-top: 15px;
+      padding-bottom: 10px;
+      font-size: 25px;
+    }
+    .create__janl__btn1{
+      font-size: 20px;
+      color: black;
+      border: solid 2px #67c5ff;
+      border-radius: 3px;
+      transition: .4s;
+      background: #f2fcff;
+      padding: 5px;
+      text-decoration: none;
+    }
+    .create__janl__btn2{
+      font-size: 20px;
+      color: black;
+      border: solid 2px #67c5ff;
+      border-radius: 3px;
+      transition: .4s;
+      background: #f2fcff;
+      padding: 5px;
+      text-decoration: none;
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+    .create__janl__btn3{
+      font-size: 20px;
+      color: black;
+      border: solid 2px #67c5ff;
+      border-radius: 3px;
+      transition: .4s;
+      background: #f2fcff;
+      padding: 5px;
+      text-decoration: none;
+    }
+  }
+  .create__title{
+    font-size: 25px;
+  }
+}

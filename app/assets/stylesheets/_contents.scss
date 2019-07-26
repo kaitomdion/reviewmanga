@@ -1,0 +1,362 @@
+.contents{
+  height: calc(100% - 15%);
+  background-image: url('fVwR2u3xMQ8TweR1560583180_1560583200 (1).png');
+  display: block;
+  .new-review{
+    display: inline-block;
+    vertical-align: top;
+    width: 20%;
+    height: 100%;
+    background-color: white;
+    border: solid 3px black;
+    overflow: scroll;
+    margin-left: 3px;
+    .new-review__head{
+      width: 19.8%;
+      background-color: #f5f5f5;
+      background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
+      text-align: center;
+      border-bottom: solid 3px black;
+      border-top: solid 3px black;
+      border-right: solid 3px black;
+      position: fixed;  
+      .new-review__head__text{
+        font-size: 30px;
+        animation: rollkAnime 2s linear infinite;
+      }
+    }
+    @keyframes rollkAnime{
+      50% {
+            color    : black;
+            transform: rotateX(180deg);
+          }
+     100% {
+            color    : black;
+            transform: rotateX(360deg);
+          }
+   }
+    .new-review__field{
+      padding-top: 48px;
+      .new-review__field__title{
+        display: inline-block;
+      }
+      .new-review__field__name{
+        display: inline-block;
+      }
+      .new-review__field__text{
+        border-bottom: solid 3px black;
+        height: 70px;
+      }
+    }
+  }
+  .main-contents{
+    height: 100%;
+    width: calc(100% - 50%);
+    display: inline-block;
+    vertical-align: top;
+    .main-contents__janl1{
+      width: calc((((100% - 50%) / 3) * 2) - 5px);
+      height: calc((100% / 10) * 9);
+      display: inline-block;
+      padding: 0.3em 1em;
+      text-decoration: none;
+      color: white;
+      border: solid 5px black;
+      border-radius: 3px;
+      transition: .4s;
+      font-size: 50px;
+      font-weight: bold; 
+      text-align: center;
+      margin-left: 1px;
+      background-image: url("https://rr.img.naver.jp/mig?src=http%3A%2F%2Fimgcc.naver.jp%2Fkaze%2Fmission%2FUSER%2F20180717%2F15%2F10156235%2F49%2F336x436xf6c217de34794ca2378418a3.jpg%2F300%2F600&twidth=300&theight=600&qlt=80&res_format=jpg&op=r");
+      background-position: center center;
+      background-size: cover;
+      font-family: 'IM Fell DW Pica SC', serif;
+      text-shadow    : 
+      5px  5px 5px #000000,
+      -5px  5px 5px #000000,
+       5px -5px 5px #000000,
+      -5px -5px 5px #000000,
+       5px  0px 5px #000000,
+       0px  5px 5px #000000,
+      -5px  0px 5px #000000,
+       0px -5px 5px #000000;
+    }
+    .main-contents__janl1:hover{
+      background-image: url('http://blog-imgs-53.fc2.com/a/n/g/angelsworld/20130314201447515.jpg');
+      background-position: center center;
+      background-size: cover;
+      color: white;
+    }
+    .main-contents__janl2{
+      width: calc((((100% - 50%) / 3) * 2) - 5px);
+      height: calc((100% / 10) * 9);
+      display: inline-block;
+      padding: 0.3em 1em;
+      text-decoration: none;
+      color: white;
+      border: solid 5px black;
+      border-radius: 3px;
+      transition: .4s;
+      font-weight: bold; 
+      font-size: 50px;
+      text-align: center;
+      margin-left: 1px;
+      background-image: url("https://kai-you.net/images/a/2014/10/b938cb480432a72fd49c0dc8ef0692f7.jpg?20190607185203");
+      background-position: center center;
+      background-size: cover;
+      font-family: 'IM Fell DW Pica SC', serif;
+      text-shadow    : 
+      5px  5px 5px #000000,
+      -5px  5px 5px #000000,
+       5px -5px 5px #000000,
+      -5px -5px 5px #000000,
+       5px  0px 5px #000000,
+       0px  5px 5px #000000,
+      -5px  0px 5px #000000,
+       0px -5px 5px #000000;
+    }
+    .main-contents__janl2:hover{
+      background-image: url("https://i0.wp.com/farufaru333.com/wp-content/uploads/2016/04/%E3%82%AD%E3%83%B3%E3%82%B0%E3%83%80%E3%83%A0.jpg?fit=350%2C460");
+      background-position: center center;
+      background-size: cover;
+      color: white;
+    }
+    .main-contents__janl3{
+      width: calc((((100% - 50%) / 3) * 2) - 5px);
+      height: calc((100% / 10) * 9);
+      display: inline-block;
+      padding: 0.3em 1em;
+      text-decoration: none;
+      color: white;
+      border: solid 5px black;
+      border-radius: 3px;
+      transition: .4s;
+      font-size: 50px;
+      font-weight: bold; 
+      text-align: center;
+      margin-left: 2px;
+      background-image: url("https://images-na.ssl-images-amazon.com/images/I/51Qktqv28SL._SY445_.jpg");
+      background-position: center center;
+      background-size: cover;
+      font-family: 'IM Fell DW Pica SC', serif;
+      text-shadow    : 
+      5px  5px 5px #000000,
+      -5px  5px 5px #000000,
+       5px -5px 5px #000000,
+      -5px -5px 5px #000000,
+       5px  0px 5px #000000,
+       0px  5px 5px #000000,
+      -5px  0px 5px #000000,
+       0px -5px 5px #000000;
+    }
+    .main-contents__janl3:hover{
+      background-image: url("https://img.news.goo.ne.jp/picture/charapedia/m_charapedia-20150426_0001.jpg");
+      background-position: center center;
+      background-size: cover;
+      color: white;
+    }
+  }
+  .main-contents__search{
+    .form{
+      padding-top: 5px;	
+      	
+      }
+    .search-box{
+      display: block;             
+      float: left;
+      box-sizing: border-box;         
+      height: 50px;              
+      width: 600px;            
+      margin: 0;                 
+      padding: 0 12px;            
+      border: 2px solid #007fff; 
+      border-radius: 20px 0 0 20px;    
+      color: #333;              
+      outline: 0;                 
+      font-size: 12px;            
+      }
+    .search-btn{
+      width: 119px;
+      float: left;              
+      box-sizing: border-box;        
+      height: 50px;              
+      margin: 0;                 
+      padding: 6px 10px;          
+      border: none;              
+      border-radius: 0 20px 20px 0;      
+      background: #007fff;
+      color: #fff;            
+      cursor: pointer;            
+      line-height: 12px;             
+      font-size: 12px;             
+      }
+    #search-btn:hover{
+      color:#666;
+      }
+  }
+  .ranking{
+    display: inline-block;
+    vertical-align: top;
+    width: 29%;
+    background-color:white;
+    height: 100%;
+    overflow: scroll;
+    border: solid 3px black;
+    .ranking__head{
+        border-bottom: solid 3px black;
+        border-top: solid 3px black;
+        border-right: solid 3px black;
+        position: fixed;
+        width: 28.7%;
+        background-color: #f5f5f5;
+        background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");   
+        .ranking__head__text{
+          font-size: 30px;
+          animation: rollkAnime 2s linear infinite;
+          text-align: center;
+        }
+      }
+    .ranking__field{
+      padding-top: 48px;
+      .ranking__field__number{
+        display: inline-block;
+        border-top: solid 3px black;
+        border-bottom: solid 3px black;
+        width: 5%;
+        padding-left: 3px;
+      }
+      .ranking__field__title{
+        width: calc(100% - 7%);
+        display: inline-block;
+        border-top: solid 3px black;
+        border-bottom: solid 3px black;
+        padding-left: 130px;
+      }
+      .ranking__field__image{
+        height: 270px;
+        width: 200px;
+        background-size: cover;
+        margin-left: 100px;
+      }
+    }
+  }
+}
+
+  .books{
+    height: 300px;
+    width: 19%;
+    display: inline-block;
+    background-color: white;
+    margin-top: 3px;
+    margin-bottom: 5px;
+    margin-left: 8px;
+    border: solid 3px black;
+    .book__image{
+      height: 270px;
+      width: 70%;
+      background-size: cover;
+      margin-left: 40px;
+    }
+    .book__title{
+      display: inline-block;
+      margin-left: 20px;
+    }
+    .book__author{
+      display: inline-block;
+    }
+  }
+  .pagination{
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    background-color: #919994;
+    background-image: url("https://www.transparenttextures.com/patterns/argyle.png");
+    width: 100%;
+    border-top: solid 3px black;
+    border-bottom: solid 3px black;
+    
+  }
+
+  .review{
+    height: calc(100% - 20%);
+
+    .left-contents{
+      height: 95%;
+      width: 45%;
+      background-color: white;
+      margin-top: 15px;
+      margin-left: 20px;
+      display: inline-block;
+      border: solid 3px black;
+      border-radius: 2.7em;
+      background-color: #bab32c;
+      background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
+      .left-contents__title{
+        font-size: 50px;
+        text-align: center;
+        border: solid 3px black;
+        border-radius: 1em;
+        background-color: #f5f5f5;
+        background-image: url("https://www.transparenttextures.com/patterns/checkered-pattern.png");
+      }
+      .left-contents__image{
+        height: 75%;
+        width: 49%;
+        margin-left: 165px;
+        margin-top: 25px;
+        .left-contents__image__url{
+          height: 100%;
+          width: 100%;
+          background-size: cover;
+          border: solid 3px black;
+        }
+      }
+    }
+
+    .right-contents{
+      font-size: 30px;
+      text-align: center;
+      display: inline-block;
+      height: 85%;
+      width: 45%;
+      background-color: #f5f5f5;
+      background-image: url("https://www.transparenttextures.com/patterns/checkered-pattern.png");
+      border: solid 3px black;
+      float: right;
+      margin-top: 50px;
+      margin-right: 50px;
+      .right-contents__text{
+        border-top: solid 3px black;
+        border-bottom: solid 3px black;
+        height: 400px;
+        width: 100%;  
+      }
+      .right-contents__label{
+        font-size: 25px;
+        float: left;
+        margin-left: 20px;
+        margin-top: 5px;
+      }
+      .right-contents__rate{
+        
+      }
+      .right-contents__submit{
+        height: 50px;
+        width: 100px;
+        float: right;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        font-size: 20px;
+      }
+    }
+
+  }
+
+
+  a {
+    color: black;
+    }
+
+ 

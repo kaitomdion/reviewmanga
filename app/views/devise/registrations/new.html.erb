@@ -1,0 +1,41 @@
+<div class= header>
+    <%= link_to "漫画レビュー.com", root_path, class: "header__title2" %>
+  </div>
+
+<div id="form-main">
+  <div id="form-div">
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
+    
+    <div class="field">
+      <%= f.label :nickname, 'ニックネーム' %><br />
+      <%= f.text_field :nickname, autofocus: true, autocomplete: "nickname", class: 'validate[required,custom[onlyLetter],length[0,100]] feedback-input', id: 'name', placeholder: 'ニックネームを入力してください' %>
+    </div>
+
+    <div class="field">
+      <%= f.label :email, 'Eメールアドレス' %><br />
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", class:'validate[required,custom[email]] feedback-input', id: 'email', placeholder: 'メールアドレスを入力してください' %>
+    </div>
+
+    <div class="field">
+      <%= f.label :password, 'パスワード' %>
+      <% if @minimum_password_length %>
+      <em>(<%= @minimum_password_length %> 文字以上)</em>
+      <% end %><br />
+      <%= f.password_field :password, autocomplete: "new-password", class:'validate[required,custom[email]] feedback-input', id: 'password', placeholder: 'パスワードを入力してください' %>
+    </div>
+
+    <div class="field">
+      <%= f.label :password_confirmation, '確認用パスワード' %><br />
+      <%= f.password_field :password_confirmation, autocomplete: "new-password", class:'validate[required,custom[email]] feedback-input', id: 'password', placeholder: '確認用にもう一度入力してください' %>
+    </div>
+
+    <div class="submit">
+      <%= f.submit "新規登録", id:"button-blue" %>
+      <div class="ease"></div>
+    </div>
+    <% end %>
+  </div>
+</div>
+
+<%# <%= render "devise/shared/links" %> 

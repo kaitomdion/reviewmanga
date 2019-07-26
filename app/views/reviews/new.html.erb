@@ -1,0 +1,28 @@
+<div class= header>
+  <%= link_to "漫画レビュー.com", root_path, class: "header__title2" %>
+</div>
+
+
+<div class= review>
+
+  <div class= left-contents>
+    <div class= 'left-contents__title' title="<%= @product.title %>">
+          <%= @product.title %>
+        </div>
+    <div class= 'left-contents__image'>
+      <div class= 'left-contents__image__url' style="background-image:url(<%= @product.image_url %>)"></div>
+    </div>       
+  </div>
+
+  <div class= right-contents>
+      コメントフォーム
+    <%= form_for [@product, @review] do |f| %>   
+      <%= f.text_area :review, placeholder: 'ここにレビューを書いてください', class: "right-contents__text" %> 
+      <%= f.label :evalution, '10段階評価', class: 'right-contents__label' %>
+      <%= f.number_field :rate, value: 1, max: 10, min: 1, class: "right-cintents__rate" %> 
+      <%= button_tag type: "submit", class: "right-contents__submit" do %>投稿する
+      <% end %>
+    <% end %> 
+  </div>
+
+</div>

@@ -1,0 +1,119 @@
+.header{
+  height: 15%;
+  width: 100%;
+  background-color: #919994;
+  background-image: url("https://www.transparenttextures.com/patterns/argyle.png"); 
+  display: block;
+  border-bottom: solid 5px black;
+   .header__title{
+     position: relative;
+     top: 25px;
+     left: 260px;
+     width: 30%;;
+     font-size: 50px;
+     color          : #ffffff; 
+     border-radius: 0.5em;
+     padding-left: 30px;
+     padding-right: 30px;
+     font-family: 'IM Fell DW Pica SC', serif;
+     text-shadow    : 
+     4px  4px 1px #6286cf,
+     -4px  4px 1px #6286cf,
+      4px -4px 1px #6286cf,
+     -4px -4px 1px #6286cf,
+      4px  0px 1px #6286cf,
+      0px  4px 1px #6286cf,
+     -4px  0px 1px #6286cf,
+      0px -4px 1px #6286cf;  
+   }
+   .header__btn__new{
+    font-size: 25px;
+    float: left;
+    display: inline-block;
+    padding: 0.3em 1em;
+    text-decoration: none;
+    color: #67c5ff;
+    border: solid 3px black;
+    border-radius: 3px;
+    transition: .4s;
+    background: #f2fcff;
+    margin-left: 15px;
+    border-radius: 0.3em;
+    margin-top: 40px;
+    animation: blinkAnimeS2 2s infinite alternate;
+   }
+   .header__btn__new:hover {
+    background: #67c5ff;
+    color: white;
+   }
+   .header__btn1{
+    font-size: 25px;
+    float: right;
+    display: inline-block;
+    padding: 0.3em 1em;
+    text-decoration: none;
+    color: #67c5ff;
+    border: solid 3px black;
+    border-radius: 3px;
+    transition: .4s;
+    background: #f2fcff;
+    margin-right: 15px;
+    border-radius: 0.3em;
+    margin-top: 40px;
+    animation: blinkAnimeS2 2s infinite alternate;
+   }
+
+ @keyframes blinkAnimeS2{
+  0%{ color: #000000;   background:white }
+100%{ color: #ffffff; background:#67c5ff  }
+}
+   .header__btn1:hover {
+    background: #67c5ff;
+    color: white;
+  }
+  .header__btn2{
+    font-size: 25px;
+    float: right;
+    display: inline-block;
+    padding: 0.3em 1em;
+    text-decoration: none;
+    color: #67c5ff;
+    border: solid 3px black;
+    border-radius: 3px;
+    transition: .4s;
+    background: #f2fcff;
+    margin-right: 15px;
+    border-radius: 0.3em;
+    margin-top: 40px;
+    animation: blinkAnimeS2 2s infinite alternate;
+   }
+   .header__btn2:hover {
+    background: #67c5ff;
+    color: white;
+  }
+  .header__img{
+    background-image:url(~/desktop/usagi.jpg)
+  }
+}
+
+.header__title2{
+  position: relative;
+  top: 25px;
+  left: 480px;
+  width: 30%;;
+  font-size: 50px;
+  color          : #ffffff; 
+  border-radius: 0.5em;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-family: 'IM Fell DW Pica SC', serif;
+  text-shadow    : 
+  4px  4px 1px #6286cf,
+  -4px  4px 1px #6286cf,
+   4px -4px 1px #6286cf,
+  -4px -4px 1px #6286cf,
+   4px  0px 1px #6286cf,
+   0px  4px 1px #6286cf,
+  -4px  0px 1px #6286cf,
+   0px -4px 1px #6286cf;  
+}

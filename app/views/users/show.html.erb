@@ -1,0 +1,32 @@
+<div class= header>
+  <%= link_to "漫画レビュー.com", root_path, class: "header__title2" %>
+</div>
+
+
+
+<div class= mypage>
+  <div class= mypage__title>
+       <%= @users.nickname %>さんのマイページ
+  </div>
+  <div class= mypage__review>
+    最近のレビュー
+  </div>
+  <div class= mypage__new-review>
+<% @review.each do |review| %>
+ <div class= mypage__new-review__title>
+  <%= review.product.title %>
+  <% if current_user.id == review.user_id %>
+  <a href= '/products/<%= review.product.id %>/reviews/<%= review.id %>/edit'>編集</a>
+  <% else %>
+  <%= render :partial => "likes/like", locals: {review: review, likes: @likes} %>
+<% end %>
+  <div class='mypage__new-review__image' style="background-image:url(<%= review.product.image_url %>)"></div>
+  <div class= mypage__new-review__text>
+  <p>レビュー内容<br><p>
+  <%= review.review %>
+  </div>
+  </div>
+<% end %>
+</div>
+<%= paginate(@review) %>
+</div>

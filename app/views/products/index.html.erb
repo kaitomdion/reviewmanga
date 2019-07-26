@@ -1,1 +1,91 @@
-hello!world!
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet", href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <title></title>
+  </head>
+
+  <body>
+    <div class= header>
+      <%= link_to "漫画レビュー.com", root_path, class: "header__title" %>
+      <% if user_signed_in? %>
+      <%= link_to "新規投稿", new_product_path, class: "header__btn__new" %>
+      <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "header__btn1" %>
+      <a class= "header__btn2" href="/users/<%= current_user.id %>">マイページ</a>
+      <% else %>
+      <%= link_to "新規登録", new_user_registration_path, class: "header__btn1" %>
+      <%= link_to "ログイン", new_user_session_path, class: "header__btn2" %>
+      <% end %>
+    </div>
+
+    <div class= contents>
+       <div class= new-review>
+         <div class= new-review__head>
+          <div class= new-review__head__text>
+           新着コメント
+           </div>
+         </div>
+         <div class=new-review__field>
+           <% @reviews.each do |review| %>
+            <a href="/products/<%= review.product.id %>/reviews/new">
+              <div class= new-review__field__title>
+                <%= review.product.title %>
+              </div>
+            </a>
+            <a href="/users/<%= review.user.id%>">
+            <div class= new-review__field__name>
+              <%= review.user.nickname %>
+            </div>
+            </a>
+            <div class= new-review__field__text>
+              <%= review.review %>
+            </div>
+           <% end %>
+        </div>
+       </div>
+       <div class= main-contents>
+         <a href="products/1" class= main-contents__janl1 name='button1'>
+           少年
+         </a>
+         <a href="products/2" class= main-contents__janl2 name='button2'>
+           青年
+         </a>
+         <a href="products/3" class= main-contents__janl3 name='button3'>
+           少女
+         </a>
+         <div class= main-contents__search>
+           <div class= form>
+           <%= form_tag(search_products_path,:method => 'get') do %>
+            <%= text_field_tag :search, '', class: 'search-box' %>
+            <%= submit_tag '検索', :name => nil, class: 'search-btn' %>
+           <% end %>
+          </div> 
+         </div> 
+       </div>
+       <div class= ranking>
+          <div class= ranking__head>
+            <div class= ranking__head__text>
+            投稿ランキング
+            </div>
+          </div>
+          <div class= ranking__field>
+            <% @review.each.with_index(1) do |product, i| %>
+              <div class= ranking__field__number>
+                <%= i %>
+              </div>
+              <div class= ranking__field__title>
+                <%= product.title %>
+              </div>
+              <a href="/products/<%= product.id %>/reviews/new">
+                <div class= ranking__field__image style="background-image:url(<%= product.image_url %>)">
+                </div>
+              </a>
+            <% end %>
+           </div>      
+        </div>
+    </div>
+  </body>
+</html>

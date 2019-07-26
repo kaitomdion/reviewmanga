@@ -1,0 +1,25 @@
+<div class= header>
+  <%= link_to "漫画レビュー.com", root_path, class: "header__title2" %>
+</div>
+
+<div class= create>
+  <div class= create__message>お気に入り登録しました！
+  </div>
+  <div class= create__mypage>
+  <div class= create__mypage__text>
+  マイページを確認する
+  </div>
+  <a class= "create__mypage__btn" href="/users/<%= current_user.id %>"><%= @nickname %>さんのマイページ</a>
+  </div>
+  <div class= create__janl>
+  <div class= create__janl__text>
+       自分でレビューを書きに行く
+  </div>
+  <a href="/products/1" class= create__janl__btn1 name='button1'>少年漫画</a>
+  <a href="/products/2" class= create__janl__btn2 name='button2'>青年漫画</a>
+  <a href="/products/3" class= create__janl__btn3 name='button3'>少女漫画</a>
+  </div>
+  <div class= create__title>
+  <%= link_to "トップページに戻る", root_path, class: "create__title__btn" %>
+  </div>
+</div>

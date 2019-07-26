@@ -1,0 +1,40 @@
+<div class= header>
+      <%= link_to "漫画レビュー.com", root_path, class: "header__title2" %>
+</div>
+
+<div id="form-main">
+  <div id="form-div">
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+  <div class="field">
+    <%= f.label :nickname, 'ニックネーム' %><br />
+    <%= f.text_field :nickname, autofocus: true, autocomplete: "nickname",class: 'validate[required,custom[onlyLetter],length[0,100]] feedback-input', id: 'name', placeholder: 'ニックネームを入力してください' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email, 'Eメールアドレス' %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email",class:'validate[required,custom[email]] feedback-input', id: 'email', placeholder: 'メールアドレスを入力してください' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password, 'パスワード' %><br />
+    <%= f.password_field :password, autocomplete: "current-password", class:'validate[required,custom[email]] feedback-input', id: 'password', placeholder: 'パスワードを入力してください' %>
+  </div>
+
+  <% if devise_mapping.rememberable? %>
+    <div class="field">
+      <%= f.check_box :remember_me %>
+      <%= f.label :remember_me, '保存しますか？' %>
+    </div>
+  <% end %>
+
+  <div class="submit">
+    <%= f.submit "ログイン", id:"button-blue" %>
+    <div class="ease"></div>
+  </div>
+<% end %>
+ </div>
+ </div>
+
+<%# <%= render "devise/shared/links" %> 
