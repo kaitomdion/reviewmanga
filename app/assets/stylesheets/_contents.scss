@@ -1,18 +1,18 @@
 .contents{
-  height: calc(100% - 15%);
+  height: 650px;
   background-image: url('fVwR2u3xMQ8TweR1560583180_1560583200 (1).png');
   display: block;
   .new-review{
     display: inline-block;
     vertical-align: top;
-    width: 20%;
-    height: 100%;
+    width: 18%;
+    height: 670px;
     background-color: white;
     border: solid 3px black;
     overflow: scroll;
     margin-left: 3px;
     .new-review__head{
-      width: 19.8%;
+      width: 17.9%;
       background-color: #f5f5f5;
       background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
       text-align: center;
@@ -55,7 +55,7 @@
     display: inline-block;
     vertical-align: top;
     .main-contents__janl1{
-      width: calc((((100% - 50%) / 3) * 2) - 5px);
+      width: calc((((100% - 50%) / 6) * 2) - 1px);
       height: calc((100% / 10) * 9);
       display: inline-block;
       padding: 0.3em 1em;
@@ -89,7 +89,7 @@
       color: white;
     }
     .main-contents__janl2{
-      width: calc((((100% - 50%) / 3) * 2) - 5px);
+      width: calc((((100% - 50%) / 6) * 2) - 1px);
       height: calc((100% / 10) * 9);
       display: inline-block;
       padding: 0.3em 1em;
@@ -123,7 +123,7 @@
       color: white;
     }
     .main-contents__janl3{
-      width: calc((((100% - 50%) / 3) * 2) - 5px);
+      width: calc((((100% - 50%) / 6) * 2) - 1px);
       height: calc((100% / 10) * 9);
       display: inline-block;
       padding: 0.3em 1em;
@@ -198,9 +198,9 @@
   .ranking{
     display: inline-block;
     vertical-align: top;
-    width: 29%;
+    width: 30%;
     background-color:white;
-    height: 100%;
+    height: 670px;
     overflow: scroll;
     border: solid 3px black;
     .ranking__head{
@@ -208,7 +208,7 @@
         border-top: solid 3px black;
         border-right: solid 3px black;
         position: fixed;
-        width: 28.7%;
+        width: 29.9%;
         background-color: #f5f5f5;
         background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");   
         .ranking__head__text{
