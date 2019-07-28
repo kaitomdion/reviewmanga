@@ -18,7 +18,9 @@
   <% if current_user.id == review.user_id %>
   <a href= '/products/<%= review.product.id %>/reviews/<%= review.id %>/edit'>編集</a>
   <% else %>
-  <%= render :partial => "likes/like", locals: {review: review, likes: @likes} %>
+  <span id="like-<%=review.id %>">
+  <%= render :partial => "likes/like", locals: {review: review} %>
+  </span>
 <% end %>
   <div class='mypage__new-review__image' style="background-image:url(<%= review.product.image_url %>)"></div>
   <div class= mypage__new-review__text>

@@ -1,0 +1,2 @@
+<%# $("#like-buttons").html("<%= j(render partial: 'like', locals: { reviews: @revires, likes: @likes, like: @like}) %>
+$("#like-<%=@review.id %>").html("<%= j(render partial: 'like', locals: { review: @review}) %>")

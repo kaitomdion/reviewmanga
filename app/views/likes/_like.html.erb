@@ -1,9 +1,14 @@
-<% if review.like_user(current_user.id) %>
+<% if user_signed_in? %>
+  <% if like = Like.find_by(user_id: current_user.id, review_id: review.id) %>
     <%= button_to review_like_path(review_id: review.id), method: :delete, id: "like-button", remote: true do %>
-     お気に入り済み
+      お気に入り済
     <% end %>
   <% else %>
-    <%= button_to review_likes_path(review_id: review.id), method: :post, id: "like-button", remote: true do %>
+    <%= button_to review_likes_path(review), id: "like-button2", remote: true do %>
       お気に入り
     <% end %>
   <% end %>
+<% else %>
+  登録したらいいねできるよ
+<% end %>
+
