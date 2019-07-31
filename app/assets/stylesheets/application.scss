@@ -13,3 +13,12 @@
  *= require_tree .
  *= require_self
  */
+ @import "./header";
+ @import "./registrations";
+ @import "font-awesome";
+ @import "./create";
+ @import "./upload";
+ @import "./contents";
+ @import "./reset";
+ @import "./review";
+ @import "./productshow";
