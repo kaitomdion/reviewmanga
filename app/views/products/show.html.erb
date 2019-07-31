@@ -2,18 +2,96 @@
   <%= link_to "漫画レビュー.com", root_path, class: "header__title2" %>
 </div>
 
-
-<% @products.each do |product| %>
-  <li class= 'books'>
-    <div class= 'book'>
-     <a href="/products/<%= product.id %>/reviews/new"><div class='book__image' style="background-image:url(<%= product.image_url %>)"></div></a>
-      <div class= 'book__title' title="<%= product.title %>">
-         <%= product.title %>
+<div class= product-show>
+  <div class= product-show__content>
+    <div class= product-show__content__title>
+      <%= @product.title %>
+    </div>
+    <div class= "product-show__content__main clearfix">
+      <div class= product-show__content__main__left>
+        <div class= product-show__content__main__left__image style="background-image:url(<%= @product.image_url %>)">
+        </div>
       </div>
-      <div class= 'book__author' title="<%= product.author %>">
-         <%= product.author %>
+      <div class= product-show__content__main__right>
+        <table class= product-show__conten__maint__right__table>
+          <tbody>
+            <tr class= product-show__conten__maint__right__table__list>
+              <td class= product-show__content__main__right__table__list__name>
+                著者
+              </td>
+              <td class= product-show__content__main__right__table__list__info>
+                <%= @product.author %>
+              </td>
+            </tr>
+            <tr class= product-show__conten__maint__right__table__list>
+              <td class= product-show__content__main__right__table__list__name>
+                ジャンル
+              </td>
+              <td class= product-show__content__main__right__table__list__info>
+                少年漫画
+              </td>
+            </tr>
+            <tr class= product-show__conten__maint__right__table__list>
+              <td class= product-show__content__main__right__table__list__name>
+                レビュー
+              </td>
+              <td class= product-show__content__main__right__table__list__info>
+                <p class="text-small">
+  　              <% if @product.reviews.present? %>
+                      <span class="rating-star">
+                        <i class="star-actived rate-<%= @product.reviews.average(:rate).round %>0"></i>
+                      </span>
+                    <% else %>
+                      <span class="rating-star">
+                        <i class="star-actived rate-0"></i>
+                      </span>
+                  <% end %>                
+                </p>          
+              </td>
+            </tr>
+        </table>
+        <div class= product-show__content__main__right__comment>
+          <a href="/products/<%= @product.id %>/reviews/new" class=  product-show__content__main__right__comment__btn>
+            レビューを書く
+          <a>
+        </div>
       </div>
     </div>
-  </li>
-<% end %>
-<%= paginate(@products) %>
+    <div class= product-show__content__text>
+      <div class= product-show__content__text__label>
+        内容紹介
+      </div>
+      <div class= product-show__content__text__description>
+        <%= @product.description %>
+      </div>
+    </div>
+    <div class= product-show__content__review>
+      <div class= product-show__content__review__title>
+        レビュー　PICK UP！!
+      </div>
+      <% @products.each do |review| %>     
+        <div class= product-show__content__review__main>
+          <div class= product-show__content__review__main__name>
+           レビューユーザー <%= review.user.nickname %>さん
+          </div>
+          <div class= product-show__content__review__main__star>
+            評価<span class="rating-star"><i class="star-actived rate-<%= review.rate %>0"></i></span>
+          </div>
+         </div>
+          <div class= product-show__content__review__text>
+            <%= review.review %>
+          </div>
+          <div class= product-show__content__review__like>
+          <% if current_user.id != review.user_id %>
+          <span id="like-<%=review.id %>">
+          <%= render :partial => "likes/like", locals: {review: review} %>
+          </span>
+           <% end %>
+          </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+  
+

@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 2019_07_26_063457) do
     t.string "title"
     t.text "image_url"
     t.string "author"
+    t.text "description"
     t.string "genre_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
