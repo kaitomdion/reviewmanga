@@ -245,7 +245,7 @@
 
   .books{
     height: 300px;
-    width: 19%;
+    width: 18%;
     display: inline-block;
     background-color: white;
     margin-top: 3px;
@@ -260,10 +260,12 @@
     }
     .book__title{
       display: inline-block;
-      margin-left: 20px;
+      // margin-left: 5px;
+      font-size: 14px;
     }
     .book__author{
       display: inline-block;
+      font-size: 12px;
     }
   }
   .pagination{

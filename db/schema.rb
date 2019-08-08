@@ -14,6 +14,7 @@ ActiveRecord::Schema.define(version: 2019_07_26_063457) do
 
   create_table "genres", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "genre"
+    t.string "ancestry"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

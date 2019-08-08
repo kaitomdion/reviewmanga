@@ -12,7 +12,36 @@
     <div class= header>
       <%= link_to "漫画レビュー.com", root_path, class: "header__title" %>
       <% if user_signed_in? %>
-      <%= link_to "新規投稿", new_product_path, class: "header__btn__new" %>
+      <%= link_to "ジャンル", root_path, class: "header__btn__new" %>
+      <ul class="top-header__container__navi__left__l__category__list__search">
+        <% @parents.each do |parent| %>
+          <li class="top-header__container__navi__left__l__category__list__search__li">
+            <h3 class="top-header__container__navi__left__l__category__list__search__li__title">
+              <%= link_to genre_path(parent.id), class:"top-header__container__navi__left__l__category__list__search__li__title__link" do %>
+                <%= parent.genre %>
+              <% end %>
+              <ul class="top-header__container__navi__left__l__category__list__search__li__detail">
+                <% parent.children.each do |child| %>
+                  <li class="top-header__container__navi__left__l__category__list__search__li__detail__list">
+                    <%= link_to genre_path(child.id), class:"top-header__container__navi__left__l__category__list__search__li__detail__list__link" do %>
+                      <%= child.genre %>
+                    <% end %>
+                    <ul class="top-header__container__navi__left__l__category__list__search__li__detail__list__de">
+                      <% child.children.each do |grandchild| %>
+                        <li class="top-header__container__navi__left__l__category__list__search__li__detail__list__de__content">
+                          <%= link_to genre_path(grandchild.id), class: "top-header__container__navi__left__l__category__list__search__li__detail__list__de__content__text" do %>
+                            <%= grandchild.genre %>
+                          <% end %>
+                        </li>
+                      <% end %>
+                    </ul>
+                  </li>
+                <% end %>
+              </ul>
+            </h3>
+          </li>
+        <% end %>
+      </ul> 
       <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "header__btn1" %>
       <a class= "header__btn2" href="/users/<%= current_user.id %>">マイページ</a>
       <% else %>
@@ -47,13 +76,13 @@
         </div>
        </div>
        <div class= main-contents>
-         <a href="genres/1" class= main-contents__janl1 name='button1'>
+         <a href="genres/2" class= main-contents__janl1 name='button1'>
            少年
          </a>
-         <a href="genres/2" class= main-contents__janl2 name='button2'>
+         <a href="genres/3" class= main-contents__janl2 name='button2'>
            青年
          </a>
-         <a href="genres/3" class= main-contents__janl3 name='button3'>
+         <a href="genres/4" class= main-contents__janl3 name='button3'>
            少女
          </a>
          <div class= main-contents__search>

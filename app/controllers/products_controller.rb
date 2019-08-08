@@ -4,6 +4,7 @@ class ProductsController < ApplicationController
     @reviews = Review.order('created_at DESC').limit(10)
     product_ids = Review.group(:product_id).order('count_product_id DESC').limit(10).count(:product_id).keys
     @review = product_ids.map { |id| Product.find(id) }
+    @parents = Genre.all.order("id ASC").limit(1)
   end
 
   def new
