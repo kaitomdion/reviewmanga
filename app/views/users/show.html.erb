@@ -23,10 +23,14 @@
   </span>
 <% end %>
   <div class='mypage__new-review__image' style="background-image:url(<%= review.product.image_url %>)"></div>
-  <div class= mypage__new-review__text>
-  <p>レビュー内容<br><p>
-  <%= review.review %>
-  </div>
+    <div class= mypage__new-review__text>
+      <div class= mypage__new-review__text__head>
+        レビュー内容
+      </div>
+      <div class= product-show__content__review__text>
+        <%= review.review %>
+      </div>
+    </div>
   </div>
 <% end %>
 </div>

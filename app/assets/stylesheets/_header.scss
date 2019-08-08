@@ -117,3 +117,190 @@
   -4px  0px 1px #6286cf,
    0px -4px 1px #6286cf;  
 }
+
+.top-header {
+  position: relative;
+  z-index: 1001;
+  background: #fff;
+  height: 110px;
+  width: 100%;
+
+  &__container {
+    width: 1250px;
+    width: 100%;
+
+    margin: 0 auto;
+    padding: 8px 0 0;
+    &__search {
+      display: flex;
+      -webkit-box-align: center;
+      align-items: center;
+      -webkit-box-pack: justify;
+      justify-content: space-between;
+      &__form {
+        position: relative;
+        margin-left: 130px;
+        width: 100%;
+        -webkit-box-flex: 1;
+        flex: 1;
+        &__input {
+          background: #f5f5f5;
+          border-radius: 4px;
+          padding: 0 42px 0 10px;
+          width: 70%;
+          height: 30px;
+          &__btn{
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+            color: rgb(255, 255, 255);
+            background: rgb(102, 102, 102);
+            position: absolute;
+            height: 33px;
+            right: 240px;
+            line-height: 30px;
+            text-align: center;
+            width: 30px;
+            z-index: 5;
+            opacity: 0;
+          }
+        }
+        .fa-search {
+          border-top-right-radius: 4px;
+          border-bottom-right-radius: 4px;
+          color: rgb(255, 255, 255);
+          background: rgb(102, 102, 102);
+          position: absolute;
+          height: 33px;
+          right: 240px;
+          line-height: 30px;
+          text-align: center;
+          width: 30px;
+          z-index: 4;
+        }
+      }
+    }
+    &__navi {
+      margin: 8px 0 0;
+      width: 700px;
+      width: 100%;
+
+      height: 44px;
+      &__left {
+        
+        &__l {
+          list-style: none;
+          float: left;
+          &__category {
+            &__list {
+              position: relative;
+              display: inline-block;
+              padding: 0 11px;
+              cursor: pointer;
+              &__title {
+                font-size: 14px;
+                font-weight: 400;
+                &__link {
+                  font-weight: bold;
+                  color: black;
+                  text-decoration: none;
+                  line-height: 30px;
+                  .fa-list {
+                    color: #ea352d;
+                    font-size: 12px;
+                    margin-right: 4px;
+                  }
+                  .fa-tag {
+                    color: #ea352d;
+                    font-size: 12px;
+                    margin-right: 4px;
+                  }
+                }
+
+                &__link:hover {
+                  color: #0099e8;
+                }
+              }
+              &__search {
+                width: 300px;
+                height: 500px;
+                position: absolute;
+                top: 70px;
+                left: 30px;
+                z-index: 1000;
+                background: #fff;
+                box-shadow: 0 1px 1px 0 rgba(0,0,0,0.24);
+                display: none;
+                &__li {
+                  &__title {
+                    font-weight: 400;
+                    font-size: 14px;
+                    &__link{
+                      padding: 0 16px;
+                      line-height: 44px;
+                      text-decoration: none;
+                      display: block;
+                      color: black;
+                    }
+                    &__link:hover {
+                      color: #fff;
+                    }
+                  }
+                  &__title:hover{
+                    background: #ea352d;
+                  }
+                  &__detail {
+                    position: absolute;
+                    top: 0;
+                    left: 190px;
+                    bottom: 0;
+                    background: #fff;
+                    display: none;
+                    &__list {
+                      width: 300px;
+                      &__link {
+                        padding: 8px 16px;
+                        text-decoration: none;
+                        display: block;
+                        color: #333;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        font-size: 14px;
+                      }
+                      &__link:hover {
+                        background: #eee;
+                      }
+                      &__de {
+                        position: absolute;
+                        top: 0;
+                        left: 200px;
+                        bottom: 0;
+                        background: #fff;
+                        display: none;
+                        &__content {
+                          &__text {
+                            padding: 8px 16px;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            font-size: 14px;
+                            text-decoration: none;
+                            display: block;
+                            color: black;
+                          }
+                          &__text:hover {
+                            background: #eee;
+                          }
+                        }    
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
