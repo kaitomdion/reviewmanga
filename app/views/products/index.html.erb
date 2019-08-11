@@ -100,11 +100,8 @@
             投稿ランキング
             </div>
           </div>
-          <div class= ranking__field>
+          <div class= "ranking__field clearfix">
             <% @review.each.with_index(1) do |product, i| %>
-              <div class= ranking__field__number>
-                <%= i %>
-              </div>
               <div class= ranking__field__title>
                 <%= product.title %>
               </div>

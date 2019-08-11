@@ -17,6 +17,7 @@ class ProductsController < ApplicationController
   def show
     @product = Product.find(params[:id])
     @products = Review.where(product_id: @product.id).order(Arel.sql("RAND()")).limit(1)
+    @genre = Genre.find(@product.genre_id)
   end
   
   
