@@ -15,7 +15,7 @@ https://reviewmanga.herokuapp.com/
 右側はコメント数の多い作品順に表示されます。  
 下の検索部分では作品名と作者名でけんさくができます。  
 左上のジャンルではさらに細かいジャンルで検索することができます。
-<img width="722" alt="スクリーンショット 2019-08-13 1 56 49" src="https://user-images.githubusercontent.com/50935402/62882845-ba86eb80-bd6d-11e9-8ed0-b904e7d59d63.png">
+<img width="722" alt="スクリーンショット 2019-08-13 1 56 49" src="https://user-images.githubusercontent.com/50935402/62882845-ba86eb80-bd6d-11e9-8ed0-b904e7d59d63.png">  
 検索結果のページから作品を選択すると作品の詳細ページにいくことができます。  
 詳細ページではその作品の情報を見ることができます。  
 レビューを書くのボタンを押すとレビューページにいくことができます。  
